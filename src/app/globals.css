@@ -2,26 +2,77 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+
+#stripe {
+        background-image: 
+          repeating-linear-gradient(
+            -45deg, 
+            transparent, 
+            transparent 1rem,
+            #E1ad01 1rem,
+            #E1ad01 2rem
+          );
+        background-size: 200% 200%;
+        animation: barberpole 10s linear infinite;
+      }
+
+@keyframes barberpole {
+        100% {
+          background-position: 100% 100%;
+        }
+      }
+
+
+
+
+@keyframes barberpole2 {
+  100% {
+    background-position: 100% 100%;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+#banner{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+ 
+  
+
+}
+
+#clouds{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height:100%;
+  overflow: hidden;
+
+
+}
+#cloudanimation1{
+  animation: animate 8s linear infinite;
+}
+#cloudanimation2{
+  animation: animate 6s linear infinite;
+}
+#cloudanimation3{
+  animation: animate 10s linear infinite;
+}
+#cloudanimation4{
+  animation: animate 15s linear infinite;
+}
+#cloudanimation5{
+  animation: animate 12s linear infinite;
+}
+
+@keyframes animate {
+  0%{
+    left: -2100px;;
+  }
+  100%{
+    left: 100vw;
+   
+  }
 }
